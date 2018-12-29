@@ -23,9 +23,13 @@ html.has-navbar-fixed-top,
 body.has-navbar-fixed-top {
   padding-top: 4.2rem;
 }
-.main-container {
+.main {
+  padding-top: 2rem;
   height: 100%;
   overflow: auto;
+}
+.main >.container {
+  padding: 1rem;
 }
 @media screen and (min-width: 1280px) {
   .is-1-column .container,
@@ -84,7 +88,7 @@ img.thumbnail {
 }
 .navbar-logo img,
 .footer-logo img {
-  max-height: 1.75rem;
+  max-height: 2.2rem;
 }
 .navbar-main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -111,7 +115,7 @@ img.thumbnail {
 .navbar-main .navbar-item {
   display: flex;
   align-items: center;
-  padding: 1.25rem 0.75rem;
+  padding: 1rem 0.75rem;
 }
 .navbar-main .navbar-item.is-active {
   color: #3273dc;
@@ -130,6 +134,7 @@ img.thumbnail {
   }
 }
 .footer {
+  margin-top: 3rem;
   background: #fff;
 }
 .footer .field .button {
