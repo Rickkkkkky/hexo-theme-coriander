@@ -13,15 +13,16 @@
     <link rel="icon" href="/hexo-theme-coriander/images/favicon.ico" type="image/x-icon">
 
 
+<link rel="stylesheet" href="/hexo-theme-coriander/styles/lib/typo/typo.css">
 
 <!-- Highlight -->
 
-    <link rel="stylesheet" href="/hexo-theme-coriander/styles/lib/highlight/ocean.css">
+    <link rel="stylesheet" href="/hexo-theme-coriander/styles/lib/highlight/monokai-sublime.css">
 
 
 <!-- Custom Style -->
 <link rel="stylesheet" href="/hexo-theme-coriander/styles/schemes/bulma.css">
-<link rel="stylesheet" href="/hexo-theme-coriander/styles/style.css">
+<!-- <link rel="stylesheet" href="/hexo-theme-coriander/styles/style.css"> -->
 
 <!-- JQuery -->
 <script src="/hexo-theme-coriander/scripts/lib/jquery.slim.min.js"></script>
@@ -88,13 +89,40 @@
  * @param {Object} list - a list of tags
  -->
 
-    <li>
-        <span>
-            <span class="level">
-                <span class="level-item has-text-grey">没有标签</span>
-            </span>
-        </span>
-    </li>
+    
+        <li>
+            <a class="level is-marginless" href="/hexo-theme-coriander/tags/Getting-Started/">
+                <span class="level-start">
+                    <span class="level-item">Getting Started</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">0</span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a class="level is-marginless" href="/hexo-theme-coriander/tags/Advanced-Topics/">
+                <span class="level-start">
+                    <span class="level-item">Advanced Topics</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">0</span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a class="level is-marginless" href="/hexo-theme-coriander/tags/帮助文档/">
+                <span class="level-start">
+                    <span class="level-item">帮助文档</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+    
 
             </ul>
         </div>
@@ -117,7 +145,7 @@
             <div class="level-item has-text-centered">
                 <div>
                     <!-- Avatar -->
-                    <img class="image is-128x128 has-mb-6" src="/hexo-theme-coriander/images/avatar.png" alt="Your name">
+                    <img class="image is-128x128" src="/hexo-theme-coriander/images/avatar.png" alt="Your name">
                     <!-- Author -->
                     <p class="is-size-4 is-block">
                         Your name
@@ -134,9 +162,8 @@
                 <div>                
                     <!-- E-mail -->
                     <p class="is-size-8 is-block">
-                        <img class="image is-24x24" src="/hexo-theme-coriander/images/email.png" alt="email">
                         
-                        <a href="mailto:your@email.address" title="your@email.address" class="has-link-grey">your@email.address</a>
+                        <a href="mailto:your@email.address" title="your@email.address" class="is-link-light">your@email.address</a>
                     </p>                
                 </div>
             </div>
@@ -160,7 +187,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        10
                     </p>
                 </div>
             </div>
@@ -171,7 +198,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        3
                     </p>
                 </div>
             </div>
@@ -207,8 +234,8 @@
        
         <div class="media-content">
             <div class="content">
-                <time class="has-text-grey is-size-7 is-block" datetime="2018-12-17T11:11:27.878Z">2018-12-17</time>
-                <a class="has-link-black-ter is-size-6 is-single-line" href="/hexo-theme-coriander/posts/hello-world.html">Hello World</a>
+                <time class="has-text-light is-size-7 is-block" datetime="2019-03-15T08:16:00.000Z">2019-03-15</time>
+                <a class="is-link-strong is-size-6 is-single-line" href="/hexo-theme-coriander/posts/开始使用Coriander.html">开始使用 Coriander</a>
                 <div class="level article-meta is-mobile">
                     <div class="level-left">
                         
@@ -233,18 +260,47 @@
  * @param {Object} list - a list of tags
  -->
 
-    <li>
-        <span>
-            <span class="level">
-                <span class="level-item has-text-grey">没有标签</span>
-            </span>
-        </span>
-    </li>
+    
+        <li>
+            <a class="level is-marginless" href="/hexo-theme-coriander/tags/Getting-Started/">
+                <span class="level-start">
+                    <span class="level-item">Getting Started</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">0</span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a class="level is-marginless" href="/hexo-theme-coriander/tags/Advanced-Topics/">
+                <span class="level-start">
+                    <span class="level-item">Advanced Topics</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">0</span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a class="level is-marginless" href="/hexo-theme-coriander/tags/帮助文档/">
+                <span class="level-start">
+                    <span class="level-item">帮助文档</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+    
 
             </ul>
         </div>
     </div>
     <div class="card-footer">
+        
+            <a class="button is-fullwidth is-primary" href="/hexo-theme-coriander/tags">更多标签</a>
         
     </div>
 </div>
@@ -258,12 +314,12 @@
     <div class="container">
         <div class="level">
             <div class="level-start has-text-centered-mobile">
-                <a class="footer-logo is-block has-mb-6" href="/hexo-theme-coriander/">
+                <a class="footer-logo is-block" href="/hexo-theme-coriander/">
                     
                         <img src="/hexo-theme-coriander/images/logo.png" alt="Theme Coriander" height="28">
                     
                 </a>
-                <p class="is-size-7">&copy; 2018 Theme Coriander  Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/Rickkkkkky/hexo-theme-coriander">Coriander</a></p>
+                <p class="is-size-7">&copy; 2019 Theme Coriander  Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/Rickkkkkky/hexo-theme-coriander">Coriander</a></p>
             </div>
         </div>
     </div>

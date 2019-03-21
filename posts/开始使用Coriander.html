@@ -5,7 +5,7 @@
  * <head> 标签
  -->
 <meta charset="utf-8">
-<title>Hello World - Theme Coriander</title>
+<title>开始使用 Coriander - Theme Coriander</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <!-- Favicon -->
@@ -13,15 +13,16 @@
     <link rel="icon" href="/hexo-theme-coriander/images/favicon.ico" type="image/x-icon">
 
 
+<link rel="stylesheet" href="/hexo-theme-coriander/styles/lib/typo/typo.css">
 
 <!-- Highlight -->
 
-    <link rel="stylesheet" href="/hexo-theme-coriander/styles/lib/highlight/ocean.css">
+    <link rel="stylesheet" href="/hexo-theme-coriander/styles/lib/highlight/monokai-sublime.css">
 
 
 <!-- Custom Style -->
 <link rel="stylesheet" href="/hexo-theme-coriander/styles/schemes/bulma.css">
-<link rel="stylesheet" href="/hexo-theme-coriander/styles/style.css">
+<!-- <link rel="stylesheet" href="/hexo-theme-coriander/styles/style.css"> -->
 
 <!-- JQuery -->
 <script src="/hexo-theme-coriander/scripts/lib/jquery.slim.min.js"></script>
@@ -40,7 +41,7 @@
             <!-- Logo -->
             <a class="navbar-item navbar-logo" href="/hexo-theme-coriander/">
                 
-                    <img src="/hexo-theme-coriander/images/logo.png" alt="Hello World">
+                    <img src="/hexo-theme-coriander/images/logo.png" alt="开始使用 Coriander">
                 
             </a>
             <!-- Nav Menu Button -->
@@ -90,11 +91,11 @@
             <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
                 <div class="level-left">
                     <!-- Post Date -->
-                    <time class="level-item has-text-grey" datetime="2018-12-17T11:11:27.878Z">12 days ago ( 2018-12-17 )</time>
+                    <time class="level-item has-text-light" datetime="2019-03-15T08:16:00.000Z">6 days ago ( Last Friday at 4:16 PM )</time>
                     <!-- Read Time -->
                     
-                        <span class="level-item has-text-grey">
-                            大约 74 字 ( 阅读时间：几秒 )
+                        <span class="level-item has-text-light">
+                            大约 179 字 ( 阅读时间：1 分钟 )
                         </span>
                     
                 </div>
@@ -102,24 +103,21 @@
         
         <!-- Article Title -->
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            <a class="has-link-black-ter" href="/hexo-theme-coriander/posts/hello-world.html">Hello World</a>
+            <a class="is-link-strong" href="/hexo-theme-coriander/posts/开始使用Coriander.html">开始使用 Coriander</a>
         </h1>
         <!-- Article Content -->
         <div class="content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2>Quick Start</h2>
-<h3>Create a new post</h3>
-<p><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string hljs-string">"My New Post"</span></span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3>Run server</h3>
-<p><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3>Generate static files</h3>
-<p><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3>Deploy to remote sites</h3>
-<p><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <p><a href="https://github.com/Rickkkkkky/hexo-theme-coriander" target="_blank" rel="noopener">Coriander</a> 是基于 <a href="https://bulma.io/" target="_blank" rel="noopener">Bulma</a> 开发的一款可配置的 Hexo 主题。主题为 Hexo 博客提供了可定制化的侧边栏工具、多种颜色主题方案以及基于 <code>highlight.js</code> 的代码高亮方案。</p>
+<a id="more"></a>
+<p>可以从 Github 上下载 Coriander 主题，并将主题文件夹放在 Hexo 博客的 <code>themes</code> 文件夹中。</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-built_in">clone</span> git@github.com:Rickkkkkky/hexo-theme-coriander.git themes/coriander</span><br></pre></td></tr></table></figure>
+<p>在 <code>_config.yml</code> 文件中配置博客的主题：</p>
+<figure class="highlight yml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">theme:</span> <span class="hljs-string">coriander</span></span><br></pre></td></tr></table></figure>
+<p>然后运行下面的命令即可查看主题效果：</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Coriander 主题参考了 <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">hexo-theme-icarus</a>，icarus 主题是一款功能齐全并易于上手的 Hexo 主题，在这里向大家强烈推荐！</p>
+</blockquote>
 
         </div>
         <!-- Read More -->
@@ -143,7 +141,7 @@
             <div class="level-item has-text-centered">
                 <div>
                     <!-- Avatar -->
-                    <img class="image is-128x128 has-mb-6" src="/hexo-theme-coriander/images/avatar.png" alt="Your name">
+                    <img class="image is-128x128" src="/hexo-theme-coriander/images/avatar.png" alt="Your name">
                     <!-- Author -->
                     <p class="is-size-4 is-block">
                         Your name
@@ -160,9 +158,8 @@
                 <div>                
                     <!-- E-mail -->
                     <p class="is-size-8 is-block">
-                        <img class="image is-24x24" src="/hexo-theme-coriander/images/email.png" alt="email">
                         
-                        <a href="mailto:your@email.address" title="your@email.address" class="has-link-grey">your@email.address</a>
+                        <a href="mailto:your@email.address" title="your@email.address" class="is-link-light">your@email.address</a>
                     </p>                
                 </div>
             </div>
@@ -186,7 +183,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        10
                     </p>
                 </div>
             </div>
@@ -197,7 +194,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        3
                     </p>
                 </div>
             </div>
@@ -233,8 +230,8 @@
        
         <div class="media-content">
             <div class="content">
-                <time class="has-text-grey is-size-7 is-block" datetime="2018-12-17T11:11:27.878Z">2018-12-17</time>
-                <a class="has-link-black-ter is-size-6 is-single-line" href="/hexo-theme-coriander/posts/hello-world.html">Hello World</a>
+                <time class="has-text-light is-size-7 is-block" datetime="2019-03-15T08:16:00.000Z">2019-03-15</time>
+                <a class="is-link-strong is-size-6 is-single-line" href="/hexo-theme-coriander/posts/开始使用Coriander.html">开始使用 Coriander</a>
                 <div class="level article-meta is-mobile">
                     <div class="level-left">
                         
@@ -259,18 +256,47 @@
  * @param {Object} list - a list of tags
  -->
 
-    <li>
-        <span>
-            <span class="level">
-                <span class="level-item has-text-grey">没有标签</span>
-            </span>
-        </span>
-    </li>
+    
+        <li>
+            <a class="level is-marginless" href="/hexo-theme-coriander/tags/Getting-Started/">
+                <span class="level-start">
+                    <span class="level-item">Getting Started</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">0</span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a class="level is-marginless" href="/hexo-theme-coriander/tags/Advanced-Topics/">
+                <span class="level-start">
+                    <span class="level-item">Advanced Topics</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">0</span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a class="level is-marginless" href="/hexo-theme-coriander/tags/帮助文档/">
+                <span class="level-start">
+                    <span class="level-item">帮助文档</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+    
 
             </ul>
         </div>
     </div>
     <div class="card-footer">
+        
+            <a class="button is-fullwidth is-primary" href="/hexo-theme-coriander/tags">更多标签</a>
         
     </div>
 </div>
@@ -284,12 +310,12 @@
     <div class="container">
         <div class="level">
             <div class="level-start has-text-centered-mobile">
-                <a class="footer-logo is-block has-mb-6" href="/hexo-theme-coriander/">
+                <a class="footer-logo is-block" href="/hexo-theme-coriander/">
                     
-                        <img src="/hexo-theme-coriander/images/logo.png" alt="Hello World" height="28">
+                        <img src="/hexo-theme-coriander/images/logo.png" alt="开始使用 Coriander" height="28">
                     
                 </a>
-                <p class="is-size-7">&copy; 2018 Hello World  Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/Rickkkkkky/hexo-theme-coriander">Coriander</a></p>
+                <p class="is-size-7">&copy; 2019 开始使用 Coriander  Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/Rickkkkkky/hexo-theme-coriander">Coriander</a></p>
             </div>
         </div>
     </div>
