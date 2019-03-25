@@ -88,12 +88,18 @@
     <!-- Thumbnail -->
     
     <div class="card-content article">
-        <!-- Post Date and Read Time -->
+        <!-- Post Infos -->
         
-            <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level article-meta is-size-7 is-uppercase is-overflow-x-auto">
                 <div class="level-left">
                     <!-- Post Date -->
-                    <time class="level-item has-text-light" datetime="2019-03-15T08:16:00.000Z">8 天前 ( 2019 03.15 )</time>
+                    <time class="level-item has-text-light" datetime="2019-03-15T08:16:00.000Z">10 天前 ( 2019 03.15 )</time>
+                    <!-- Categories -->
+                    
+                        <div class="level-item is-size-7 is-uppercase">
+                            <a class="is-link-light is-link" href="/hexo-theme-coriander/categories/配置/">配置</a> / <a class="is-link-light is-link" href="/hexo-theme-coriander/categories/配置/基本配置/">基本配置</a>
+                        </div>
+                    
                     <!-- Read Time -->
                     
                         <span class="level-item has-text-light">
@@ -107,6 +113,18 @@
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             <a class="is-link-strong" href="/hexo-theme-coriander/posts/开始使用Coriander.html">开始使用 Coriander</a>
         </h1>
+        <!-- Tags -->
+        
+            <div class="level">
+                <div class="level-left">
+                    
+                        <div class="level-item">
+                            <a class="button is-size-7 is-primary" href="/hexo-theme-coriander/tags/帮助文档/">帮助文档</a>
+                        </div>
+                    
+                </div>
+            </div>
+        
         <!-- Article Content -->
         <div class="content">
             <p><a href="https://github.com/Rickkkkkky/hexo-theme-coriander" target="_blank" rel="noopener">Coriander</a> 是基于 <a href="https://bulma.io/" target="_blank" rel="noopener">Bulma</a> 开发的一款可配置的 Hexo 主题。主题为 Hexo 博客提供了可定制化的侧边栏工具、多种颜色主题方案以及基于 <code>highlight.js</code> 的代码高亮方案。</p>
@@ -174,17 +192,11 @@
                     <p class="is-size-6 is-block">
                         Your description
                     </p>
-                </div>
-            </div>
-        </nav>
-        <nav class="level">
-            <div class="level-item has-text-centered">
-                <div>                
                     <!-- E-mail -->
                     <p class="is-size-8 is-block">
                         
                         <a href="mailto:your@email.address" title="your@email.address" class="is-link-light">your@email.address</a>
-                    </p>                
+                    </p>
                 </div>
             </div>
         </nav>
@@ -207,7 +219,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        2
                     </p>
                 </div>
             </div>
@@ -229,6 +241,44 @@
                 关注
             </a>
         </div>
+    </div>
+</div>
+        
+            
+<div class="card">
+    <header class="card-header">
+        <h3 class="card-header-title">
+            归档
+        </h3>
+    </header>
+    <div class="card-content">
+        <div class="menu">
+            <ul class="menu-list">
+                
+                    
+                        <li>
+                            <a class="level is-marginless" href="/hexo-theme-coriander/archives/2019/03">
+                                <span class="level-start">
+                                    <span class="level-item">
+                                        三月 - 2019
+                                    </span>
+                                </span>
+                                <span class="level-end">
+                                    <span class="level-item tag">
+                                        1
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+    <div class="card-footer">
+        
+            <a class="button is-fullwidth is-primary" href="/hexo-theme-coriander/archives">全部归档</a>
+        
     </div>
 </div>
         
@@ -258,6 +308,10 @@
                 <a class="is-link-strong is-size-6 is-single-line" href="/hexo-theme-coriander/posts/开始使用Coriander.html">开始使用 Coriander</a>
                 <div class="level article-meta is-mobile">
                     <div class="level-left">
+                        
+                            <div class="level-item is-size-7 is-uppercase">
+                                <a class="is-link-light is-link" href="/hexo-theme-coriander/categories/配置/">配置</a> / <a class="is-link-light is-link" href="/hexo-theme-coriander/categories/配置/基本配置/">基本配置</a>
+                            </div>
                         
                     </div>
                 </div>
@@ -304,28 +358,41 @@
 </div>
         
             <div class="card">
-  <header class="card-header">
-    <h3 class="card-header-title">
-      分类
-    </h3>
-  </header>
-  <div class="card-content">
-    <div class="menu">
-      <ul class="menu-list">
-          <!-- 
+    <header class="card-header">
+        <h3 class="card-header-title">
+            分类
+        </h3>
+    </header>
+    <div class="card-content">
+        <div class="menu">
+            <ul class="menu-list">
+                <!-- 
  * 分类列表
  * @param {Object} list - a list of categories
  -->
 
-    <li>
-        <span class="level">
-            <span class="level-item has-text-light">没有分类</span>
-        </span>
-    </li>
+    
+        <li>
+            <a class="level is-marginless" href="/hexo-theme-coriander/categories/配置/">
+                <span class="level-start">
+                    <span class="level-item">配置</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+            
+        </li>
+    
 
-      </ul>
-  </div>
-  </div>
+            </ul>
+        </div>
+    </div>
+    <div class="card-footer">
+        
+            <a class="button is-fullwidth is-primary" href="/hexo-theme-coriander/categories">详细分类</a>
+        
+    </div>
 </div>
         
     </div>
