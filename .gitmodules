@@ -1,0 +1,3 @@
+[submodule "themes/coriander"]
+	path = themes/coriander
+	url = https://github.com/Rickkkkkky/hexo-theme-coriander/tree/master
