@@ -5,7 +5,7 @@
     <div class="card-content">
         <div class="menu">
             <ul class="menu-list">
-                <%- partial('common/tags_list', { list: site.tags }) %>
+                <%- partial('common/tags_list', { list: site.tags.filter((tag) => !!tag.length) }) %>
             </ul>
         </div>
     </div>
