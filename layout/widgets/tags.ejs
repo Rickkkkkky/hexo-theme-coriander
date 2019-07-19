@@ -1,0 +1,17 @@
+<div class="card">
+    <header class="card-header">
+        <h3 class="card-header-title"><%= __('widgets.tags.title') %></h3>
+    </header>
+    <div class="card-content">
+        <div class="menu">
+            <ul class="menu-list">
+                <%- partial('common/tags_list', { list: site.tags.slice(0, get_config('widgets.tags.limit')) }) %>
+            </ul>
+        </div>
+    </div>
+    <div class="card-footer">
+        <% if (site.tags.length) { %>
+            <a class="button is-fullwidth is-primary" href="<%= url_for(get_config('tag_dir')) %>"><%= __('widgets.tags.more') %></a>
+        <% } %>
+    </div>
+</div>

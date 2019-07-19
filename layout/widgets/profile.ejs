@@ -1,0 +1,69 @@
+<!-- 
+ * 个人简介部件
+ -->
+<div class="card">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <!-- Avatar -->
+                    <img class="image is-128x128" src="<%= url_for(get_config('widgets.profile.avatar')) %>" alt="<%= get_config('widgets.profile.author') %>">
+                    <!-- Author -->
+                    <p class="is-size-4 is-block">
+                        <%= get_config('widgets.profile.author') %>
+                    </p>
+                    <!-- Author Description -->
+                    <p class="is-size-6 is-block">
+                        <%= get_config('widgets.profile.author_desc') %>
+                    </p>
+                    <!-- E-mail -->
+                    <p class="is-size-8 is-block">
+                        <% let email = get_config('widgets.profile.email') %>
+                        <%- mail_to(email, email, { class: 'is-link-light' }) %>
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <!-- Post Count -->
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        <%= _p('common.post', Infinity) %>
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        <%= site.posts.length %>
+                    </p>
+                </div>
+            </div>
+            <!-- Category Count -->
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        <%= _p('common.category', Infinity) %>
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        <%= site.categories.length %>
+                    </p>
+                </div>
+            </div>
+            <!-- Tag Count -->
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        <%= _p('common.tag', Infinity) %>
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        <%= site.tags.length %>
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <!-- Follow Link -->
+        <div class="level">
+            <a class="level-item button is-primary" href="<%= url_for(get_config('widgets.profile.follow_link')) %>" target="_blank">
+                <%= __('widgets.profile.follow') %>
+            </a>
+        </div>
+    </div>
+</div>

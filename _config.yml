@@ -1,0 +1,46 @@
+# Path or URL of the website's icon
+favicon: /images/favicon.ico
+# Website style scheme, source sass files in coriander/source/styles/schemes/sass
+style_scheme: bulma
+# Path or URL to the website's logo to be shown on the left of the navigation bar or footer
+logo: /images/logo.png
+# Navigation bar links settings
+navbar:
+    menu:
+# Widget settings
+widgets:
+    profile:
+        author: Your name
+        author_desc: Your description
+        avatar: /images/avatar.png
+        email: your@email.address
+        follow_link: https://github.com/Rickkkkkky
+    categories:
+        limit: 5
+    tags:
+        limit: 5
+    archives:
+        limit: 10
+    recent_posts:
+        limit: 5
+# Set the widgets in the side columns
+side_column:
+    left:
+        - profile
+        - archives
+    right:
+        - recent_posts
+        - tags
+        - categories
+# Article settings
+article:
+    # Article thumbnail images settings
+    thumbnail:
+        enable: true
+    # Article readtime settings
+    readtime:
+        enable: true
+    # Code highlight settings
+    highlight:
+        enable: true
+        theme: github

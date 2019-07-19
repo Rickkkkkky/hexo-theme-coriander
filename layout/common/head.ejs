@@ -1,0 +1,25 @@
+<!--
+ * <head> 标签
+ -->
+<meta charset="utf-8">
+<title><%= create_page_title() %></title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- Favicon -->
+<% if (has_config('favicon')) { %>
+    <link rel="icon" href="<%- url_for(get_config('favicon')) %>" type="image/x-icon">
+<% } %>
+
+<%- css('/styles/lib/typo/typo') %>
+
+<!-- Highlight -->
+<% if (get_config('article.highlight.enable') === true) { %>
+    <%- css('/styles/lib/highlight/' + get_config('article.highlight.theme')) %>
+<% } %>
+
+<!-- Custom Style -->
+<%- css('/styles/schemes/' + get_config('style_scheme')) %>
+<!-- <%- css('/styles/style') %> -->
+
+<!-- JQuery -->
+<%- js('/scripts/lib/jquery.slim.min') %>

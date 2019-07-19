@@ -1,0 +1,6 @@
+<!-- Article List -->
+<% page.posts.forEach(function(post){ %>
+    <%- partial('common/article', { post, hasMore: false }) %>
+<% }) %>
+<!-- Paginator -->
+<%- partial('common/paginator') %>

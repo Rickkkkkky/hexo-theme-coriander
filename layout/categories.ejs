@@ -1,0 +1,12 @@
+<div class="card">
+    <header class="card-header">
+        <h3 class="card-header-title"><%= _p('common.category', Infinity) %></h3>
+    </header>
+    <div class="card-content">
+        <div class="menu">
+            <ul class="menu-list">
+                <%- partial('common/categories_list', { list: create_categories_list(3) }) %>
+            </ul>
+        </div>
+    </div>
+</div>

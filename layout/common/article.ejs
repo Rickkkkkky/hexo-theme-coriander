@@ -1,0 +1,73 @@
+<!--
+ * 文章
+ * @param {Object} post
+ * @param {boolean} hasMore
+ -->
+<div class="card">
+    <!-- Thumbnail -->
+    <% if (has_thumbnail(post)) { %>
+        <div class="card-image">
+            <a class="image is-7by1" href="<%= url_for(post.path) %>">
+                <img class="thumbnail" src="<%= get_thumbnail(post) %>">
+            </a>
+        </div>
+    <% } %>
+    <div class="card-content article">
+        <!-- Post Infos -->
+        <% if (post.layout !== 'page') { %>
+            <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                <div class="level-left">
+                    <!-- Post Date -->
+                    <time class="level-item has-text-light" datetime="<%= date_xml(post.date) %>"><%= `${ moment(post.date).locale(get_config('language', 'en')).fromNow() } ( ${ moment(post.date).format('YYYY MM.DD') } )` %></time>
+                    <!-- Categories -->
+                    <% if (post.categories && post.categories.length) { %>
+                        <div class="level-item is-size-7 is-uppercase">
+                            <%- list_categories(post.categories, {
+                                class: 'is-link-light is',
+                                show_count: false,
+                                style:'none',
+                                separator:' / '
+                            }) %>
+                        </div>
+                    <% } %>
+                    <!-- Read Time -->
+                    <% if (get_config('article.readtime.enable') === true) { %>
+                        <span class="level-item has-text-light">
+                            <%= `${ __('article.readtime.about') } ${ count_word(post.content) } ${ __('article.readtime.words') } ( ${ __('article.readtime.read') }${ duration((count_word(post.content) / 150.0) * 60, 'seconds').locale(get_config('language', 'en')).humanize() } )` %>
+                        </span>
+                    <% } %>
+                </div>
+            </div>
+        <% } %>
+        <!-- Article Title -->
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            <a class="is-link-strong" href="<%- url_for(post.path) %>"><%= post.title %></a>
+        </h1>
+        <!-- Tags -->
+        <% if (post.tags.length) { %>
+            <div class="level is-mobile">
+                <div class="level-left">
+                    <% post.tags.forEach((tag) => { %>
+                        <div class="level-item">
+                            <a class="button is-size-7 is-primary" href="<%- url_for(tag.path) %>"><%= tag.name %></a>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        <% } %>
+        <!-- Article Content -->
+        <div class="content">
+            <%- !hasMore && post.excerpt ? post.excerpt : post.content %>
+        </div>
+        <!-- Read More -->
+        <% if (!hasMore && post.excerpt) { %>
+            <div class="level is-mobile">
+                <div class="level-start">
+                    <div class="level-item">
+                        <a class="button is-size-7 is-light" href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>

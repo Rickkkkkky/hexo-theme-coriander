@@ -1,0 +1,29 @@
+<!-- 
+ * 分类列表
+ * @param {Object} list - a list of categories
+ -->
+<% if (list.length) { %>
+    <% list.forEach((cat) => { %>
+        <li>
+            <a class="level is-marginless" href="<%= url_for(cat.path) %>">
+                <span class="level-start">
+                    <span class="level-item"><%= cat.name %></span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag"><%= cat.length %></span>
+                </span>
+            </a>
+            <% if (cat.children && cat.children.length) { %>
+                <ul>
+                    <%- partial('categories_list', { list: cat.children }) %>
+                </ul>
+            <% } %>
+        </li>
+    <% }) %>
+<% } else { %>
+    <li>
+        <span class="level">
+            <span class="level-item has-text-light"><%= _p('common.category', 0) %></span>
+        </span>
+    </li>
+<% } %>

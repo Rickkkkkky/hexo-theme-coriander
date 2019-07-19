@@ -1,0 +1,11 @@
+<!--
+ * 侧边列
+ * @param {string} side - left or right
+ -->
+<% if (has_side_column(side)) { %>
+    <div class="column <%= side_column_class(side) %>">
+        <% get_side_widgets(side).forEach((widget) => { %>
+            <%- partial('widgets/' + widget) %>
+        <% }) %>
+    </div>
+<% } %>

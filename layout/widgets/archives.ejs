@@ -1,0 +1,47 @@
+<% let {list, dates} = create_archives_list(); %>
+<div class="card">
+    <header class="card-header">
+        <h3 class="card-header-title">
+            <%= __('widgets.archives.title') %>
+        </h3>
+    </header>
+    <div class="card-content">
+        <div class="menu">
+            <ul class="menu-list">
+                <% if (dates.length) { %>
+                    <% for(let date of dates.slice(0, get_config('widgets.archives.limit'))) { %>
+                        <li>
+                            <a class="level is-marginless" href="<%= url_for(get_config('archive_dir')) + moment(date).format('/YYYY/MM') %>">
+                                <span class="level-start">
+                                    <span class="level-item">
+                                        <%= moment(date).locale(get_config('language', 'en')).format('MMMM - YYYY') %>
+                                    </span>
+                                </span>
+                                <span class="level-end">
+                                    <span class="level-item tag">
+                                        <%= list[date].length %>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    <% } %>
+                <% } else { %>
+                    <li>
+                        <span>
+                            <span class="level">
+                                <span class="level-item has-text-light">
+                                    <%= _p('common.archive', 0) %>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    <div class="card-footer">
+        <% if (dates.length) { %>
+            <a class="button is-fullwidth is-primary" href="<%= url_for(get_config('archive_dir')) %>"><%= __('widgets.archives.more') %></a>
+        <% } %>
+    </div>
+</div>

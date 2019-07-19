@@ -1,0 +1,12 @@
+<div class="card">
+    <header class="card-header">
+        <h3 class="card-header-title"><%= _p('common.tag', Infinity) %></h3>
+    </header>
+    <div class="card-content">
+        <div class="menu">
+            <ul class="menu-list">
+                <%- partial('common/tags_list', { list: site.tags }) %>
+            </ul>
+        </div>
+    </div>
+</div>

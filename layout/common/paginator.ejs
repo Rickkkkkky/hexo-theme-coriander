@@ -1,0 +1,25 @@
+<!-- 
+ * 分页导航栏
+ -->
+<div class="card card-transparent">
+    <nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+        <!-- Prev -->
+        <div class="pagination-previous <%= page.current > 1 ? '' : 'is-invisible is-hidden-mobile' %>">
+            <a class="is-flex-grow" href="<%= get_paginate_url(page.current - 1) %>"><%= __('paginator.prev') %></a>
+        </div>
+        <!-- Next -->
+        <div class="pagination-next <%= page.current < page.total ? '' : 'is-invisible is-hidden-mobile' %>">
+            <a class="is-flex-grow" href="<%= get_paginate_url(page.current + 1) %>"><%= __('paginator.next') %></a>
+        </div>
+        <!-- Nav List -->
+        <ul class="pagination-list is-hidden-mobile">
+            <% for (let item of create_paginate_list()) { %>
+                <% if (item.type === 'link') { %>
+                    <li><a class="pagination-link <%= item.isCurrent ? 'is-current' : '' %>" href="<%= item.href %>"><%= item.index %></a></li>
+                <% } else if (item.type === 'hellip') { %>
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+                <% } %>
+            <% } %>
+        </ul>
+    </nav>
+</div>
