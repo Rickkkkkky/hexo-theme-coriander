@@ -1,0 +1,12 @@
+<!-- 
+ * 以时间线的方式展示文章列表
+ * @param {Object} posts - a list of posts
+ * @param {number} year
+ * @param {number} [month=null]
+ -->
+<h3 class="tag is-primary">
+    <%= month ? moment([year, month - 1]).locale(get_config('language', 'en')).format('MMMM  YYYY') : year %>
+</h3>
+<div class="timeline">
+    <%- partial('posts_list', { posts: posts }) %>
+</div>

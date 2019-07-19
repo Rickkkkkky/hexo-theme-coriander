@@ -1,0 +1,27 @@
+<% function archiveList (posts, year, month = null) { %>
+    <div class="card">
+        <div class="card-content">
+            <%- partial('common/timeline', {
+                posts: posts,
+                year: year,
+                month: month
+            }) %>
+        </div>
+    </div>
+<% } %>
+
+<!-- Archives -->
+<% if (!page.year) {
+    let list = {}
+    page.posts.forEach((post) => {
+        let year = post.date.year()
+        list[year] = (list[year] || []).concat(post)
+    })
+    let years = Object.keys(list).sort((a, b) => b - a)
+    for (let year of years) { %>
+        <%- archiveList(list[year], year, null) %>
+    <% }
+} else { %>
+    <%- archiveList(page.posts, page.year, page.month) %>
+<% } %>
+<%- partial('common/paginator') %>

@@ -1,0 +1,40 @@
+common:
+    home: Home
+    archive:
+        zero: No Archives
+        one: Archive
+        other: Archives
+    category:
+        zero: No Categories
+        one: Category
+        other: Categories
+    tag:
+        zero: No Tags
+        one: Tag
+        other: Tags
+    post:
+        one: Post
+        other: Posts
+paginator:
+    prev: Prev
+    next: Next
+widgets:
+    profile:
+        follow: Follow
+    tags:
+        title: Tags
+        more: More Tags
+    recent_posts:
+        title: Recent Posts
+    categories:
+        title: Categories
+        more: Category Details
+    archives:
+        title: Archives
+        more: All Archives
+article:
+    readtime:
+        read: 'Readtime: '
+        about: About
+        words: Words
+    more: Read More

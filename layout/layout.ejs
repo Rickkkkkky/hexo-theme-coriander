@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html <%- has_config('language') ? 'lang="' + get_config('language').substring(0, 2) + '"' : '' %>>
+<head>
+    <%- partial('common/head') %>
+</head>
+<body class="is-<%= count_layout_column() %>-column has-navbar-fixed-top">
+
+    <!-- Navigation Bar -->
+    <%- partial('common/navbar') %>
+
+    <!-- Content -->
+    <section class="main">
+        <div class="container">
+            <div class="columns">
+                <div class="column <%= main_column_size_class() %> has-order-2">
+                    <%- body %>
+                </div>
+                <%- partial('common/side_column', { side: 'left' }) %>
+                <%- partial('common/side_column', { side: 'right' }) %>
+            </div>
+        </div>
+    <!-- Footer -->
+    <%- partial('common/footer') %>
+    </section>
+
+
+    <%- js('/scripts/main.js') %>
+
+</body>
+</html>

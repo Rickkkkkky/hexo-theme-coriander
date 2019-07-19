@@ -1,0 +1,19 @@
+<div class="card">
+    <header class="card-header">
+        <h3 class="card-header-title">
+            <%= __('widgets.categories.title') %>
+        </h3>
+    </header>
+    <div class="card-content">
+        <div class="menu">
+            <ul class="menu-list">
+                <%- partial('common/categories_list', { list: create_categories_list(1).slice(0, get_config('widgets.categories.limit')) }) %>
+            </ul>
+        </div>
+    </div>
+    <div class="card-footer">
+        <% if (site.categories.length) { %>
+            <a class="button is-fullwidth is-primary" href="<%= url_for(get_config('category_dir')) %>"><%= __('widgets.categories.more') %></a>
+        <% } %>
+    </div>
+</div>

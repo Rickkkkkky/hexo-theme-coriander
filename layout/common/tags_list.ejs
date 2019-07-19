@@ -1,0 +1,26 @@
+<!-- 
+ * 标签列表
+ * @param {Object} list - a list of tags
+ -->
+<% if (list.length) { %>
+    <% list.forEach((tag) => { %>
+        <li>
+            <a class="level is-marginless" href="<%= url_for(tag.path) %>">
+                <span class="level-start">
+                    <span class="level-item"><%= tag.name %></span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag"><%= tag.length %></span>
+                </span>
+            </a>
+        </li>
+    <% }) %>
+<% } else { %>
+    <li>
+        <span>
+            <span class="level">
+                <span class="level-item has-text-light"><%= _p('common.tag', 0) %></span>
+            </span>
+        </span>
+    </li>
+<% } %>

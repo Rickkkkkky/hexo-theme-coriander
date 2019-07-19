@@ -1,0 +1,16 @@
+<footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block" href="<%- url_for('/') %>">
+                    <% if (has_config('logo.text') && get_config('logo.text')) { %>
+                        <%= get_config('logo.text') %>
+                    <% } else { %>
+                        <img src="<%- url_for(get_config('logo')) %>" alt="<%= get_config('title') %>" height="28">
+                    <% } %>
+                </a>
+                <p class="is-size-7">&copy; <%= date(new Date(), 'YYYY') %> <%= `${ get_config('author') }'s Blog` %> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/Rickkkkkky/hexo-theme-coriander">Coriander</a></p>
+            </div>
+        </div>
+    </div>
+</footer>

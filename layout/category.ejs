@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="<%= url_for('/' + get_config('category_dir')) %>"><%= _p('common.category', Infinity) %></a>
+                </li>
+                <% for (let cat of page.parents) { %>
+                    <li>
+                        <a href="<%= url_for(cat.path) %>"><%= cat.name %></a>
+                    </li>
+                <% } %>
+                <li class="is-active">
+                    <a href="<%= url_for(page.category.path) %>"><%= page.category.name %></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="card widget">
+    <header class="card-header">
+        <h3 class="card-header-title"><%= _p('common.category', Infinity) %></h3>
+    </header>
+    <div class="card-content">
+        <div class="menu">
+            <ul class="menu-list">
+                <%- partial('common/categories_list', { list: create_categories_list(1, page.category._id) }) %>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-content">
+        <%- partial('common/posts_list', { posts: page.posts }) %>
+    </div>
+</div>
+<%- partial('common/paginator') %>

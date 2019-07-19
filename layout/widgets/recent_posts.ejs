@@ -1,0 +1,10 @@
+<div class="card">
+    <header class="card-header">
+        <h3 class="card-header-title"><%= __('widgets.recent_posts.title') %></h3>
+    </header>
+    <div class="card-content">
+        <%- partial('common/posts_list', {
+            posts: site.posts.sort('date', -1).limit(get_config('widgets.recent_posts.limit'))
+        }) %>
+    </div>
+</div>

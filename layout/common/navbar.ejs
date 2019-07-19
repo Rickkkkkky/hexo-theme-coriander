@@ -1,0 +1,44 @@
+<!--
+ * 导航栏
+ -->
+<nav class="navbar navbar-main is-fixed-top">
+    <div class="container">
+        <!-- Nav Brand -->
+        <div class="navbar-brand is-flex-center">
+            <!-- Logo -->
+            <a class="navbar-item navbar-logo" href="<%= url_for('/') %>">
+                <% if (has_config('logo.text') && get_config('logo.text')) { %>
+                    <%= get_config('logo.text') %>
+                <% } else { %>
+                    <img src="<%= url_for(get_config('logo')) %>" alt="<%= get_config('title') %>">
+                <% } %>
+            </a>
+            <!-- Nav Menu Button -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="site-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- Nav Menu -->
+        <div class="navbar-menu" id="site-menu">
+            <div class="navbar-start">
+                <!-- Home -->
+                <a class="navbar-item <%= link_is_active_class('/') %>" href="<%= url_for('/') %>"><%= __('common.home') %></a>
+                <!-- Archives -->
+                <a class="navbar-item <%= link_is_active_class('/' + get_config('archive_dir')) %>" href="<%= url_for('/' + get_config('archive_dir')) %>"><%= _p('common.archive', Infinity) %></a>
+                <!-- Categories -->
+                <a class="navbar-item <%= link_is_active_class('/' + get_config('category_dir')) %>" href="<%= url_for('/' + get_config('category_dir')) %>"><%= _p('common.category', Infinity) %></a>
+                <!-- Tags -->
+                <a class="navbar-item <%= link_is_active_class('/' + get_config('tag_dir')) %>" href="<%= url_for('/' + get_config('tag_dir')) %>"><%= _p('common.tag', Infinity) %></a>
+                <!-- Other Menu Item -->
+                <% if (get_config('navbar.menu') instanceof Array) { %>
+                    <% for (let item of get_config('navbar.menu')) { %>
+                        <a class="navbar-item <%= link_is_active_class(item.path) %>" href="<%= url_for(item.path) %>"><%= item.name%></a>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+        <div class="navbar-end"></div>
+    </div>
+</nav>
