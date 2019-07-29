@@ -2,7 +2,7 @@
   "name": "hexo-theme-coriander",
   "version": "0.1.0",
   "scripts": {
-    "cm": "git-cz",
+    "cm": "npx git-cz",
     "release": "standard-version"
   },
   "husky": {
